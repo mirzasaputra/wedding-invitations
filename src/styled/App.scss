@@ -1,0 +1,12 @@
+/* Color Customizing */
+$theme-colors: (
+    'primary': #4A55A2,
+    'info': #A0BFE0,
+    'danger': #FF6666,
+    'success': #1B9C85,
+    'warning': #FFB84C,
+    'secondary': #EAE3D2,
+);
+
+/* import bootstrap */
+@import '~bootstrap/scss/bootstrap';

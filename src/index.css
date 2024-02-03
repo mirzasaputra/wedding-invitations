@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'AntipastoPro-Thin';
+  src: url('/public/fonts/AntipastoPro-Thin_trial.ttf');
+}
+
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: url('/public/fonts/JosefinSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'alsscrp';
+  src: url('/public/fonts/alsscrp.ttf');
+}
+
+.lock-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/public/images/bg-banner.jpg');
+  background-size: cover;
+  background-position: top;
+  color: #c09962;
+  z-index: 9999;
+}
+
+.font-antipasto {
+  font-family: 'AntipastoPro-Thin';
+}
+
+.font-josefin-sans {
+  font-family: 'Josefin-Sans';
+}
+
+.font-alsscript {
+  font-family: 'alsscrp';
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.wedding-title-init {
+  font-size: 6rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  color: #c09962;
+  font-weight: bold;
+}
+
+.wedding-title-init:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 160px;
+  height: 3px;
+  background-color: #c09962;
+}
+
+.wedding-title-init:after {
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 3px;
+  background-color: #c09962;
+}
+
+.wedding-title {
+  font-size: 3rem;
+  color: #c09962
+}
+
+.time-box {
+  border: 1px solid #c09962!important;
+  box-shadow: 0 0 15px #c09962 inset;
+}
+
+.time-box * {
+  color: #c09962!important
+}
+
+.btn-outline-custom {
+  border-radius: 0;
+  border: 1px solid #c09962;
+  padding: 10px 15px;
+  box-shadow: 0 0 10px #c09962 inset;
+  color: #c09962;
+  text-transform: uppercase;
+}
+
+.btn-outline-custom:focus, .btn-outline-custom:hover {
+  background: #c09962;
+  color: #fff;
+  box-shadow: 0 0 5px #c09962;
+  transition: .5s ease-in-out;
+}
+
+.blink-animation {
+  animation: blinkAnimate 1s infinite;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes blinkAnimate {
+  0% {
+    opacity: 1;
+  } 50% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    top: 0
+  } 50% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+    top: -50%;
+  }
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section-1.bg-custom, .section-3.bg-custom {
+  background-image: url('/public/images/background.png'), linear-gradient(to bottom, #f0e6d8, #f0e6d8);
+  background-position: center;
+  background-size: contain;
+}
+
+.section-1 {
+  color: #c09962;
+}
+
+.section-1 .text-custom {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.section-1 .is-translation {
+  margin-top: .8rem;
+}
+
+.section-1 .is-translation p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.image-frame {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  box-shadow: 5px 8px 15px #c09962;
+  margin-bottom: 2rem;
+}
+
+.section-1 .name-tag {
+  font-size: 3rem
+}
+
+.section-2, .section-3, .section-4 {
+  color: #c09962;
+}
+
+.section-2 .bg-custom {
+  background: linear-gradient(to bottom, #000000c3, #000000c3), url('/public/images/bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.line-break hr {
+  border: 1px solid #c09962;
+  width: 100%;
+}
+
+.maps {
+  border: 0!important;
+  outline: none!important;
+  pointer-events: none!important;
+}
+
+.section-4.bg-custom {
+  background-image: url('/public/images/background.png'), linear-gradient(to bottom, #eeddc6, #eeddc6);
+  background-position: center;
+  background-size: contain;
+}
