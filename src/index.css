@@ -13,15 +13,62 @@
   src: url('/public/fonts/alsscrp.ttf');
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: #c0996271;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c09962;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  text-shadow: 0 0 25px #c09962;
+  color: #c09962;
+  animation: zoomInOut .8s ease-in-out infinite;
+}
+
+.loader i:nth-child(2) {
+  animation-delay: .4s;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  } 100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
 .lock-screen {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/public/images/bg-banner.jpg');
+  background-image: linear-gradient(to bottom, #00000076, #00000076), url('/public/images/bg-banner.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: center;
   color: #c09962;
   z-index: 9999;
 }
@@ -137,7 +184,7 @@
   width: 100%;
 }
 
-.section-1.bg-custom, .section-3.bg-custom {
+.section-1.bg-custom, .section-3.bg-custom, .section-5.bg-custom {
   background-image: url('/public/images/background.png'), linear-gradient(to bottom, #f0e6d8, #f0e6d8);
   background-position: center;
   background-size: contain;
@@ -179,7 +226,7 @@
   font-size: 3rem
 }
 
-.section-2, .section-3, .section-4 {
+.section-2, .section-3, .section-5 {
   color: #c09962;
 }
 
@@ -206,8 +253,52 @@
   pointer-events: none!important;
 }
 
+.section-4 {
+  color: #fff;
+}
+
+.section-4 .line-break hr {
+  border: 1px solid #fff;
+}
+
 .section-4.bg-custom {
-  background-image: url('/public/images/background.png'), linear-gradient(to bottom, #eeddc6, #eeddc6);
+  background-image: url('/public/images/background.png'), linear-gradient(to bottom, #977f5e, #977f5e);
   background-position: center;
   background-size: contain;
+}
+
+.gallery-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: 0 0 10px #dcc8ad;
+}
+
+.gallery-container:hover {
+  box-shadow: 0 0 25px #ddaf6f;
+  transition: .5s ease-in-out;
+}
+
+.form-control.custom {
+  padding: 15px 20px;
+  box-shadow: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.form-control.custom:focus {
+  box-shadow: 0 0 10px #c09962;
+  border: 1px solid #c09962;
+}
+
+.btn.btn-custom {
+  background: #c09962;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.comment .comment-container {
+  margin-bottom: 2rem;
 }
